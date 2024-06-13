@@ -1,0 +1,15 @@
+version: '3'
+services:
+  client:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    ports:
+      - '80:80'
+      - '443:443'
+    container_name: price-client
+    environment:
+      REACT_APP_API_URL: 'https://mis-ru-selling-service.numedy.com'
+    volumes:
+      - /opt/ssl:/opt/ssl

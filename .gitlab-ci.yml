@@ -1,0 +1,32 @@
+include: 'argocd.gitlab-ci.yml'
+
+stages:
+  - build
+  - deploy
+
+variables:
+  REGISTRY_URL: kuber-vrn-docker-registry.numedy.com:5000
+  IMAGE_NAME: $REGISTRY_URL/$CI_PROJECT_NAME:$CI_PIPELINE_IID
+
+build-push-image:
+  stage: build
+  script:
+    - echo "//${CI_SERVER_HOST}/api/v4/packages/npm/:_authToken=${CI_JOB_TOKEN}" >> .npmrc
+    - docker build -t $IMAGE_NAME .
+    - docker push $IMAGE_NAME
+  tags:
+    - builder-linux
+
+update_manifest:
+  variables:
+    ARGOCD_IMAGE_NAME: $CI_PROJECT_NAME
+    ARGOCD_IMAGE_TAG: $CI_PIPELINE_IID
+    ARGOCD_BRANCH: selling-service
+    ARGOCD_VALUES_DIR: price-front/master
+
+  extends:
+    - .update_argocd-helm
+  tags:
+    - builder-linux
+  rules:
+    - if: $CI_COMMIT_BRANCH == "main"

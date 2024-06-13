@@ -1,0 +1,26 @@
+@import '../../../shared/styles/variables.scss';
+
+.inputWrapper {
+  position: relative;
+  display: flex;
+  border: 1px solid $grey-border;
+  height: 19px;
+  background-color: white;
+}
+
+.input {
+  padding-left: 4px;
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 0;
+  color: #999999;
+
+  font-size: 13px;
+  line-height: 1;
+  font-style: italic;
+  border: 0px;
+}
+
+.ico {
+  margin: 2px 4px 2px 0;
+}

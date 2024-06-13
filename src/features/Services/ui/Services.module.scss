@@ -1,0 +1,124 @@
+@import '../../../shared/styles/variables.scss';
+.wrapper {
+  display: grid;
+  grid-template-columns: 576px 19px 278px 19px;
+  height: 100%;
+  width: 100%;
+
+  overflow-y: scroll;
+  overflow-x: hidden;
+
+  .services {
+    display: grid;
+    grid-template-rows: 20px auto;
+    row-gap: 2px;
+    .filters {
+      display: grid;
+      grid-template-columns: 120px 428px auto;
+      column-gap: 2px;
+      max-width: 576px;
+    }
+    .servicesList {
+      max-width: 576px;
+      .nameColumns {
+        background-color: #d9dada;
+        box-sizing: border-box;
+        font-size: 11px;
+        font-weight: 700;
+        height: 20px;
+        padding-top: 3px;
+        text-align: center;
+        margin-top: 2px;
+      }
+      .result {
+        background-color: #e4e2e2;
+        box-sizing: border-box;
+        font-size: 11px;
+        font-weight: 700;
+        height: 20px;
+        padding-top: 3px;
+        padding-right: 10px;
+        text-align: right;
+        margin-top: 2px;
+      }
+      .allServices {
+        max-height: 838px;
+        // overflow-y: scroll;
+        .serviceRow {
+          padding-left: 4px;
+          height: 22px;
+          padding-top: 2px;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          overflow: hidden;
+          box-sizing: border-box;
+        }
+        .activeServiceRow {
+          background-color: $green-main !important;
+        }
+      }
+    }
+  }
+
+  .prices {
+    .header {
+      display: grid;
+      grid-template-columns: 68px 68px 68px 68px;
+      grid-template-rows: 43px 20px;
+      gap: 2px;
+
+      .date {
+        background-color: #d9dada;
+        box-sizing: border-box;
+        font-size: 11px;
+        font-weight: 700;
+        height: 100%;
+        padding-top: 8px;
+        text-align: center;
+        margin-top: 2px;
+      }
+      .rezult {
+        background-color: #e4e2e2;
+        box-sizing: border-box;
+        font-size: 13px;
+        font-weight: 700;
+        height: 100%;
+        padding-top: 2px;
+        text-align: right;
+        margin-top: 2px;
+        padding-right: 8px;
+      }
+    }
+    .body {
+      display: flex;
+      justify-content: space-between;
+      div {
+        text-align: end;
+
+        div {
+          width: 68px;
+          height: 22px;
+          box-sizing: border-box;
+        }
+      }
+      // div.priceColl {
+      //   border: $dark-green 0.5px solid;
+      // }
+    }
+  }
+}
+
+.imgArrow {
+  margin-top: 15px;
+  margin-left: 5px;
+  width: 10px;
+  height: 15px;
+}
+
+input[type='number'] {
+  padding-block: 0;
+  padding-inline: 0;
+  width: inherit;
+  height: inherit;
+  box-sizing: border-box;
+}

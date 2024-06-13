@@ -1,0 +1,21 @@
+$dark-green: #4f8654;
+$green-main: #6ab574;
+$green-bg-1: #c0e1c6;
+$green-bg-2: #e6f2e8;
+$zebra-active: #6ab572;
+
+$grey-bg-1: #d9dada;
+$grey-bg-2: #ebecec;
+$grey-txt: #898989;
+$grey-border: #9d9e9e;
+
+$b-radius: 5px;
+
+@mixin styled-scrollbar() {
+  scrollbar-width: 15px;
+
+  &::-webkit-scrollbar {
+    width: 15px;
+    background-color: blue;
+  }
+}

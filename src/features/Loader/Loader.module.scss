@@ -1,0 +1,22 @@
+@import '../../shared/styles/variables.scss';
+
+.container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  background: rgba($color: #fff, $alpha: 0.5);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.center {
+  border: 1px solid $zebra-active;
+  border-radius: $b-radius;
+  padding: 10px;
+  background: #fff;
+}

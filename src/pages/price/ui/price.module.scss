@@ -1,0 +1,419 @@
+@import '../../../shared/styles/variables.scss';
+
+.wrapper {
+  box-sizing: border-box;
+  height: 933px;
+  width: 1695px;
+  border: solid 1px $green-main;
+  border-radius: $b-radius;
+}
+
+.header {
+  background-color: $green-bg-1;
+
+  height: 25px;
+  display: flex;
+  .block1 {
+    width: 218px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    .headerName {
+      color: #000;
+      font-size: 13px;
+      font-weight: 700;
+      padding-left: 10px;
+    }
+    .add_btn {
+      padding-top: 2px;
+      padding-left: 75px;
+    }
+    .add_btn:disabled {
+      opacity: 50%;
+    }
+  }
+
+  .btnOk {
+    width: 100px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    height: 22px;
+    border: solid 1px $green-main;
+    box-sizing: border-box;
+    font-weight: bold;
+    padding-left: 2px;
+
+    .img {
+      margin-right: 23px;
+      background: url(../../../shared//icons/arrow02.png);
+      height: 100%;
+      width: 15px;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+
+  .btnOk:disabled,
+  .btnOk[disabled] {
+    background-color: $grey-bg-1;
+    color: $grey-txt;
+    .img {
+      margin-right: 23px;
+      background: url(../../../shared//icons/arrow01.png);
+      height: 100%;
+      width: 15px;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+
+  .btnOk:hover {
+    background-color: $green-main;
+    .img {
+      margin-right: 23px;
+      background: url(../../../shared//icons/arrow03.png);
+      height: 100%;
+      width: 15px;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+
+  .btnOk:focus {
+    background-color: $dark-green;
+    color: white;
+    .img {
+      margin-right: 23px;
+      background: url(../../../shared//icons/arrow04.png);
+      height: 100%;
+      width: 15px;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+
+  .copyPrice {
+    width: 140px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    height: 22px;
+    border: solid 1px $green-main;
+    box-sizing: border-box;
+    padding-left: 2px;
+    margin-left: 180px;
+    span {
+      padding-left: 6px;
+    }
+    .img {
+      background: url(../../../shared//icons/copyPrice1.png);
+      height: 100%;
+      width: 15px;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+
+  .copyPrice:disabled {
+    background-color: $grey-bg-1;
+    color: $grey-txt;
+    .img {
+      background: url(../../../shared//icons/copyPrice2.png);
+      height: 100%;
+      width: 15px;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+
+  .copyPrice:hover {
+    background-color: $green-main;
+    .img {
+      background: url(../../../shared//icons/copyPrice3.png);
+      height: 100%;
+      width: 15px;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+
+  .copyPrice:focus {
+    background-color: $dark-green;
+    color: white;
+    .img {
+      background: url(../../../shared//icons/copyPrice4.png);
+      height: 100%;
+      width: 15px;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+
+  .correctPrice {
+    width: 220px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    height: 22px;
+    border: solid 1px $green-main;
+    box-sizing: border-box;
+    padding-left: 2px;
+    margin-left: 3px;
+    span {
+      padding-left: 6px;
+    }
+    .img {
+      background: url(../../../shared//icons/correctPrice1.png);
+      height: 100%;
+      width: 15px;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+
+  .correctPrice:disabled {
+    background-color: $grey-bg-1;
+    color: $grey-txt;
+    .img {
+      background: url(../../../shared//icons/correctPrice2.png);
+      height: 100%;
+      width: 15px;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+
+  .correctPrice:hover {
+    background-color: $green-main;
+    .img {
+      background: url(../../../shared//icons/correctPrice3.png);
+      height: 100%;
+      width: 15px;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+
+  .correctPrice:focus {
+    background-color: $dark-green;
+    color: white;
+    .img {
+      background: url(../../../shared//icons/correctPrice4.png);
+      height: 100%;
+      width: 15px;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+
+  .correctedPrice {
+    width: 210px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    height: 22px;
+    border: solid 1px $green-main;
+    box-sizing: border-box;
+    padding-left: 7px;
+    margin-left: 3px;
+  }
+
+  .correctedPrice:disabled {
+    background-color: $grey-bg-1;
+    color: $grey-txt;
+  }
+
+  .correctedPrice:hover {
+    background-color: $green-main;
+  }
+
+  .correctedPrice:focus {
+    background-color: $dark-green;
+    color: white;
+  }
+
+  .currency {
+    display: flex;
+    align-items: center;
+    font-style: italic;
+    margin-left: 130px;
+    margin-right: 50px;
+  }
+
+  .saveBtn {
+    width: 20px;
+    height: 100%;
+    background: url('../../../shared/icons/save.png');
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .saveBtn:disabled,
+  .saveBtn[disabled] {
+    opacity: 0.5;
+  }
+
+  .btnClose {
+    margin-top: 3px;
+    margin-left: 100px;
+  }
+
+  .datepicker_ico {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    top: 0;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 3px;
+    background-color: #d6d6d6;
+  }
+
+  .datepicker_container {
+    position: relative;
+    border: 1px solid #999999;
+    display: flex;
+    align-items: center;
+    height: 20px;
+    background-color: #fff;
+    cursor: pointer;
+    width: 80px;
+
+    input {
+      font-size: 11px;
+      width: 70px;
+      height: 18px;
+    }
+
+    // &.disabled {
+    //   opacity: $disabled-opacity;
+    //   pointer-events: none;
+    // }
+    // &.hidden input {
+    //   visibility: hidden;
+    // }
+  }
+}
+
+.body {
+  display: grid;
+  grid-template-columns: 214px 570px 905px;
+  grid-template-rows: 908px;
+  column-gap: 2px;
+}
+
+.background {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  // pointer-events: none;
+  opacity: 0.33;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 100;
+  top: 0;
+  left: 0;
+}
+.window {
+  .body1 {
+    z-index: 200;
+    position: absolute;
+    height: 71px;
+    width: 624px;
+    background-color: $green-bg-2;
+    border-radius: $b-radius;
+    border: $green-main solid 1px;
+
+    top: 40%;
+    left: 33%;
+
+    .header {
+      background-color: $green-main;
+      display: flex;
+      .header_text {
+        font-size: 14px;
+        color: black;
+        font-weight: 600;
+        padding: 2px 2px;
+        padding-left: 10px;
+        padding-right: 250px;
+      }
+      .btn_close {
+        margin-left: 110px;
+      }
+    }
+  }
+}
+
+.window1 {
+  .body2 {
+    z-index: 300;
+    position: absolute;
+    height: 90px;
+    width: 300px;
+    background-color: $green-bg-2;
+    border-radius: $b-radius;
+    border: $green-main solid 1px;
+
+    top: 40%;
+    left: 40%;
+
+    .header {
+      background-color: $green-main;
+      display: flex;
+
+      .header_text {
+        font-size: 14px;
+        color: rgb(255, 255, 255);
+        font-weight: 600;
+        padding: 2px 2px;
+        padding-left: 110px;
+        //padding-right: 80px;
+      }
+      .btn_close {
+        margin-left: 85px;
+      }
+    }
+  }
+}
+
+.resultSaveWindow {
+  min-height: 70px;
+  min-width: 250px;
+  border: 1.5px solid rgb(181, 181, 214);
+  background-color: rgb(237, 237, 250);
+  border-radius: 3px;
+  position: fixed;
+  top: 830px;
+  left: 1400px;
+  padding: 4px;
+
+  .headerWindow {
+    color: green;
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+  .headerWindowError {
+    color: rgb(128, 0, 21);
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+}
+
+input[type='number'] {
+  padding-block: 0;
+  padding-inline: 0;
+  width: inherit;
+  height: inherit;
+  box-sizing: border-box;
+}
+
+.btnClass {
+  border: #ccc 1px solid;
+  width: 60px;
+  height: 26px;
+  margin-top: 8px;
+}

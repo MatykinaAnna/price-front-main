@@ -1,0 +1,24 @@
+variables:
+  REGISTRY_URL: test-kuber-open-ru-docker-registry.numedy.com:5000
+  ARGOCD_IMAGE_NAME: $CI_PROJECT_NAME
+  ARGOCD_IMAGE_TAG: $CI_PIPELINE_IID
+  ARGOCD_BRANCH: "selling_service"
+  ARGOCD_VALUES_DIR: price-front
+  ARGOCD_PUSH_GIT_TOKEN: $CI_TOKEN
+
+.update_argocd-helm:
+  stage: deploy
+  script:
+    - git clone https://gitlab-ci-token:${CI_JOB_TOKEN}@gitlab.numedy.com/mc/argocd-helm.git ./argocd
+    - cd ./argocd
+    - git -c core.quotepath=false -c log.showSignature=false checkout -B ${ARGOCD_BRANCH} origin/${ARGOCD_BRANCH} --
+    - git config --global user.email "${GITLAB_USER_EMAIL}"
+    - git config --global user.name "${GITLAB_USER_LOGIN}"
+    - 'echo "dockerRegistry: ${REGISTRY_URL}" > ./${ARGOCD_VALUES_DIR}/values.yaml'
+    - 'echo "imageName: ${ARGOCD_IMAGE_NAME}" >> ./${ARGOCD_VALUES_DIR}/values.yaml'
+    - 'echo "imageTag: ${ARGOCD_IMAGE_TAG}" >> ./${ARGOCD_VALUES_DIR}/values.yaml'
+    - git add ./${ARGOCD_VALUES_DIR}/values.yaml
+    - git commit -m "Update deployment image to version ${CI_PIPELINE_IID} in ${CI_PROJECT_NAME}"
+    - git push --force https://ci-token:${ARGOCD_PUSH_GIT_TOKEN}@gitlab.numedy.com/mc/argocd-helm.git
+  rules:
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH

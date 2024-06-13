@@ -1,0 +1,109 @@
+@import '../shared/styles/variables.scss';
+
+// #root {
+//   overflow: hidden;
+// }
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.header {
+  color: #000000;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+button {
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+
+  &:disabled {
+    cursor: default;
+  }
+}
+
+input {
+  outline: none;
+
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+  }
+}
+
+textarea {
+  outline: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+  }
+}
+
+input[type='checkbox'] {
+  /* height: 18px;
+  width: 18px; */
+  margin-right: 4px;
+  cursor: pointer;
+}
+
+.app {
+  width: 1695px;
+  height: 933px;
+
+  display: grid;
+  grid-template-columns: 500px 596px 595px;
+  grid-template-rows: 230px 701px;
+  gap: 2px;
+}
+
+.marketingProgram {
+  grid-row: span 2;
+}
+
+.settings {
+}
+
+.categories {
+}
+
+.services {
+}
+
+.allServices {
+}
+
+.react-datepicker-wrapper {
+  height: 100%;
+  width: 80px !important;
+  flex: none;
+
+  input {
+    width: 100%;
+    height: 100%;
+    //padding-top: 2px;
+    font-size: 11px;
+    outline: none;
+    border: none;
+  }
+}
+
+.react-datepicker__input-container {
+  display: flex !important;
+  align-items: center;
+  height: 100%;
+}
