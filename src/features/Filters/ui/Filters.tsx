@@ -64,6 +64,7 @@ const Filters = () => {
   const allPeriod = useAppSelector((state) => state.periodReducer.allPeriod)
 
   useEffect(() => {
+    console.log('useEffect')
     let arrayRegion: { id: number; name: string }[] = []
     let arrayCity: { id: number; name: string }[] = []
     let arrayDc: { id: number; name: string }[] = []
